@@ -2,7 +2,7 @@ import React from 'react';
 import './Player.css';
 
 function player(props) {
-  if (props.isWinner(props.player.score)) {
+  if (props.isWinner(props.player.score) && props.player.name !== 'Winner') {
     props.setPlayerAWinner(props.playerIndex);
   }
   return (

@@ -22,6 +22,19 @@ class App extends React.Component {
     goal: 100,
   };
 
+  setPlayerAWinner = (playerIndex) => {
+    const winnerPlayer = this.state.players.map((player, index) =>
+      index == playerIndex ? { ...player, name: 'Winner' } : player
+    );
+    // const tempState = { ...this.state };
+    // tempState.players[0] = winnerPlayer[0];
+    // tempState.players[1] = winnerPlayer[1];
+    // this.setState(tempState);
+    this.setState({
+      ...this.state,
+      players: winnerPlayer,
+    });
+  };
   render() {
     const clickHold = () => {
       const playerScore = this.state.currentScore;
@@ -41,9 +54,10 @@ class App extends React.Component {
     const calcularIsWinner = (totalScore) => {
       return totalScore >= this.state.goal;
     };
-    const setPlayerAWinner = (playerIndex) => {
-      this.state.players[playerIndex].name = 'Winner';
-    };
+    // const setPlayerAWinner = (playerIndex) => {
+    //   this.state.players[playerIndex].name = 'Winner';
+    // };
+
     const clickRoll = () => {
       const cubeResult1 = Math.floor(Math.random() * 6) + 1;
       const cubeResult2 = Math.floor(Math.random() * 6) + 1;
@@ -83,7 +97,7 @@ class App extends React.Component {
               isPlayerTurn={this.state.currentTurn === index}
               isWinner={calcularIsWinner}
               playerIndex={index}
-              setPlayerAWinner={setPlayerAWinner}
+              setPlayerAWinner={this.setPlayerAWinner}
               currentScore={
                 this.state.currentTurn === index && this.state.currentScore
               }

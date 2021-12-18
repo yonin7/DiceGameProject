@@ -1,24 +1,22 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border: black 1px solid;
   width: 50%;
   height: 60vh;
+  position: relative;
 }
 
 .titleName {
   font-size: 1.5rem;
-  position: relative;
 }
 
 .turnPoint {
-  border: 1px solid red;
-  background-color: red;
-  border-radius: 50%;
-  height: 0.5rem;
-  width: 0.5rem;
+  border: 2px solid red;
+  height: 100%;
+  width: 100%;
   position: absolute;
 }
 
