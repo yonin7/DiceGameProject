@@ -1,0 +1,6 @@
+.newGameButton {
+  color: crimson;
+  border: 1px solid crimson;
+  background-color: darkgray;
+  cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.rollDice {
+  text-align: center;
+  cursor: pointer;
+  color: crimson;
+  border: 1px solid crimson;
+  background-color: darkgray;
+  font-size: 0.75rem;
+  width: 2.5rem;
+  height: 1.5rem;
+}
