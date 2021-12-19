@@ -1,10 +1,19 @@
 .hold {
   text-align: center;
+  justify-self: center;
   cursor: pointer;
   color: crimson;
   border: 1px solid crimson;
   background-color: darkgray;
-  font-size: 0.75rem;
-  width: 2.5rem;
-  height: 1.5rem;
+  font-size: 1.75rem;
+  width: 6rem;
+  height: 3rem;
+}
+
+@media (max-width: 760px) {
+  .hold {
+    font-size: 0.75rem;
+    width: 5rem;
+    height: 2rem;
+  }
 }

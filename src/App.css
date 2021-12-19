@@ -53,14 +53,43 @@
 .gameActions {
   display: flex;
   flex-direction: column;
+  gap: 7rem;
+  position: absolute;
 }
 .playersContainer {
   display: flex;
   width: 100%;
-  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .diceContainer {
   position: absolute;
   display: flex;
   gap: 1rem;
+}
+@media (max-width: 560px) {
+  .gameBord {
+    align-items: none;
+  }
+  .playersContainer {
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+  .gameActions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    bottom: 3rem;
+  }
+  .diceContainer {
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    top: 4rem;
+  }
 }

@@ -26,10 +26,6 @@ class App extends React.Component {
     const winnerPlayer = this.state.players.map((player, index) =>
       index === playerIndex ? { ...player, name: 'Winner' } : player
     );
-    // const tempState = { ...this.state };
-    // tempState.players[0] = winnerPlayer[0];
-    // tempState.players[1] = winnerPlayer[1];
-    // this.setState(tempState);
     this.setState({
       ...this.state,
       players: winnerPlayer,
